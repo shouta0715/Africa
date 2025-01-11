@@ -20,12 +20,14 @@ struct ContentView: View {
               EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
             )
           
-          VStack(spacing: 16) {
             ForEach(animals) { animal in
+              NavigationLink(
+                destination: AnimalDetailView(animal: animal)
+              ) {
                 AnimalListItemView(animal: animal)
+              } //LINK
             } //: LOOP
-          }
-          .padding(.vertical, 16)
+          
         } //: LIST
         .navigationTitle("Africa")
       } //: NAVIGATION STACK
