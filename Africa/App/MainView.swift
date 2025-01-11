@@ -9,7 +9,23 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+      TabView {
+        Tab("Browse",systemImage: "square.grid.2x2") {
+          ContentView()
+        }
+        
+        Tab("Watch",systemImage: "play.rectangle") {
+          VideoListView()
+        }
+        
+        Tab("Map",systemImage: "map") {
+          MapView()
+        }
+        
+        Tab("Gallery",systemImage: "photo") {
+          GalleryView()
+        }
+      } //: TabView
     }
 }
 
