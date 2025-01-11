@@ -76,6 +76,8 @@ struct AnimalDetailView: View {
               headingImage: "map",
               headingText: "National Park"
             )
+            
+            InsetMapView()
           }
           .padding(.horizontal)
         }
