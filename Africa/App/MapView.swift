@@ -12,12 +12,8 @@ struct MapView: View {
   // MARK: - PROPERTIES
 
   
-  @State private var position = MapCameraPosition.region(MKCoordinateRegion(
-    center: CLLocationCoordinate2D(latitude: 6.600286, longitude: 16.4377599),
-    span: MKCoordinateSpan(latitudeDelta: 70.0, longitudeDelta: 70.0)
-  ))
-  
   let locations: [NationalParkLocation] = Bundle.main.decode("locations.json")
+  
   
   func openGoogleMap(latitude: Double,longitude: Double ) -> Void {
     let _latitude = String(format: "%.6f", latitude)
@@ -34,8 +30,8 @@ struct MapView: View {
     }
   }
 
-    var body: some View {
-      Map() {
+  var body: some View {
+    Map {
         ForEach(locations) { item in
           Annotation(item.name, coordinate: item.location) {
             Button {
@@ -44,15 +40,12 @@ struct MapView: View {
                 longitude: item.location.longitude
               )
             } label: {
-                Image("logo")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 32, height: 32, alignment: .center)
+              MapAnnotationView(location: item)
             }
           }
         }
       }
-    }
+  }
 }
 
 #Preview {
