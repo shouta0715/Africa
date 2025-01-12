@@ -6,8 +6,37 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E3FC2B422D3447E50061BBBF /* Sricker.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E3FC2B3B2D3447E30061BBBF /* Sricker.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E3FC2B402D3447E50061BBBF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E3C22EFA2D322EFF00A450CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E3FC2B3A2D3447E30061BBBF;
+			remoteInfo = Sricker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E3FC2B472D3447E50061BBBF /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E3FC2B422D3447E50061BBBF /* Sricker.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		E3C22F022D322EFF00A450CC /* Africa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Africa.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3FC2B3B2D3447E30061BBBF /* Sricker.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Sricker.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -18,6 +47,13 @@
 			);
 			target = E3C22F012D322EFF00A450CC /* Africa */;
 		};
+		E3FC2B462D3447E50061BBBF /* Exceptions for "Sricker" folder in "Sricker" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = E3FC2B3A2D3447E30061BBBF /* Sricker */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -27,6 +63,14 @@
 				E3C22F3B2D32316B00A450CC /* Exceptions for "Africa" folder in "Africa" target */,
 			);
 			path = Africa;
+			sourceTree = "<group>";
+		};
+		E3FC2B3C2D3447E30061BBBF /* Sricker */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E3FC2B462D3447E50061BBBF /* Exceptions for "Sricker" folder in "Sricker" target */,
+			);
+			path = Sricker;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -46,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				E3C22F042D322EFF00A450CC /* Africa */,
+				E3FC2B3C2D3447E30061BBBF /* Sricker */,
 				E3C22F032D322EFF00A450CC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				E3C22F022D322EFF00A450CC /* Africa.app */,
+				E3FC2B3B2D3447E30061BBBF /* Sricker.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,10 +114,12 @@
 				E3C22EFE2D322EFF00A450CC /* Sources */,
 				E3C22EFF2D322EFF00A450CC /* Frameworks */,
 				E3C22F002D322EFF00A450CC /* Resources */,
+				E3FC2B472D3447E50061BBBF /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E3FC2B412D3447E50061BBBF /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				E3C22F042D322EFF00A450CC /* Africa */,
@@ -82,6 +130,26 @@
 			productName = Africa;
 			productReference = E3C22F022D322EFF00A450CC /* Africa.app */;
 			productType = "com.apple.product-type.application";
+		};
+		E3FC2B3A2D3447E30061BBBF /* Sricker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3FC2B432D3447E50061BBBF /* Build configuration list for PBXNativeTarget "Sricker" */;
+			buildPhases = (
+				E3FC2B392D3447E30061BBBF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				E3FC2B3C2D3447E30061BBBF /* Sricker */,
+			);
+			name = Sricker;
+			packageProductDependencies = (
+			);
+			productName = Sricker;
+			productReference = E3FC2B3B2D3447E30061BBBF /* Sricker.appex */;
+			productType = "com.apple.product-type.app-extension.messages-sticker-pack";
 		};
 /* End PBXNativeTarget section */
 
@@ -94,6 +162,9 @@
 				LastUpgradeCheck = 1610;
 				TargetAttributes = {
 					E3C22F012D322EFF00A450CC = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					E3FC2B3A2D3447E30061BBBF = {
 						CreatedOnToolsVersion = 16.1;
 					};
 				};
@@ -113,12 +184,20 @@
 			projectRoot = "";
 			targets = (
 				E3C22F012D322EFF00A450CC /* Africa */,
+				E3FC2B3A2D3447E30061BBBF /* Sricker */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E3C22F002D322EFF00A450CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3FC2B392D3447E30061BBBF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -136,6 +215,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E3FC2B412D3447E50061BBBF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E3FC2B3A2D3447E30061BBBF /* Sricker */;
+			targetProxy = E3FC2B402D3447E50061BBBF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		E3C22F0E2D322F0100A450CC /* Debug */ = {
@@ -317,6 +404,46 @@
 			};
 			name = Release;
 		};
+		E3FC2B442D3447E50061BBBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F6692B489L;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Sricker/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Africa;
+				INFOPLIST_KEY_NSStickerSharingLevel = OS;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "github.com-shouta0715.Africa.Sricker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E3FC2B452D3447E50061BBBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F6692B489L;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Sricker/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Africa;
+				INFOPLIST_KEY_NSStickerSharingLevel = OS;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "github.com-shouta0715.Africa.Sricker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -334,6 +461,15 @@
 			buildConfigurations = (
 				E3C22F112D322F0100A450CC /* Debug */,
 				E3C22F122D322F0100A450CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E3FC2B432D3447E50061BBBF /* Build configuration list for PBXNativeTarget "Sricker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3FC2B442D3447E50061BBBF /* Debug */,
+				E3FC2B452D3447E50061BBBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
