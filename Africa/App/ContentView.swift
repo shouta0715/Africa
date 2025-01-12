@@ -19,6 +19,7 @@ struct ContentView: View {
             .listRowInsets(
               EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
             )
+            .padding(.bottom, 10)
           
             ForEach(animals) { animal in
               NavigationLink(
@@ -27,7 +28,6 @@ struct ContentView: View {
                 AnimalListItemView(animal: animal)
               } //LINK
             } //: LOOP
-          
         } //: LIST
         .navigationTitle("Africa")
       } //: NAVIGATION STACK

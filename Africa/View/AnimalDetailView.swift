@@ -80,9 +80,22 @@ struct AnimalDetailView: View {
             InsetMapView()
           }
           .padding(.horizontal)
+          
+          // LINK
+          Group {
+            HeadingView(
+              headingImage: "bools.vertical",
+              headingText: "Learn More"
+            )
+            
+            ExternalWeblinkView(animal: animal)
+          }
+          .padding(.horizontal)
         }
         .navigationTitle("Learm about \(animal.name)")
+        .padding(.bottom, 20)
       }
+
     
     }
 }
